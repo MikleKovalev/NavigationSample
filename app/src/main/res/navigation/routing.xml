@@ -17,4 +17,8 @@
         android:id="@+id/fragmentSecond"
         android:name="com.example.nav_sample.SecondFragment"/>
 
+    <fragment
+        android:id="@+id/fragmentThird"
+        android:name="com.example.nav_sample.ThirdFragment"/>
+
 </navigation>
