@@ -3,18 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/routing"
-    app:startDestination="@id/fragmentFirst">
+    app:startDestination="@id/fragmentCatalog">
 
     <fragment
-        android:id="@+id/fragmentFirst"
-        android:name="com.example.nav_sample.FirstFragment">
+        android:id="@+id/fragmentCatalog"
+        android:name="com.example.nav_sample.ui.Catalog">
         <action
-            android:id="@+id/firstToSecond"
-            app:destination="@id/fragmentSecond"/>
+            android:id="@+id/catalogToFilters"
+            app:destination="@id/fragmentFilters"/>
     </fragment>
 
     <fragment
-        android:id="@+id/fragmentSecond"
-        android:name="com.example.nav_sample.SecondFragment"/>
+        android:id="@+id/fragmentFilters"
+        android:name="com.example.nav_sample.ui.FiltersFragment">
+        <action
+            android:id="@+id/filtersToFilterByPharmacy"
+            app:destination="@id/fragmentFilterByPharmacy" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentFilterByPharmacy"
+        android:name="com.example.nav_sample.ui.FiltersByPharmacyFragment"/>
 
 </navigation>

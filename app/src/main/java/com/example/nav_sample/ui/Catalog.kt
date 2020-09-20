@@ -1,17 +1,19 @@
-package com.example.nav_sample
+package com.example.nav_sample.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_first.*
+import com.example.nav_sample.R
+import kotlinx.android.synthetic.main.fragment_catalog.*
 
-class FirstFragment : Fragment(R.layout.fragment_first) {
+class Catalog : Fragment(R.layout.fragment_catalog) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val navigation = Navigation.findNavController(view)
         button.setOnClickListener {
-            navigation.navigate(R.id.firstToSecond)
+
         }
     }
 }
